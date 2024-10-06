@@ -33,11 +33,11 @@ public class AnalyticsCounter {
         }
         reader.close();  // Close the reader outside the loop
         
-        // next generate output in result.out
-        FileWriter writer = new FileWriter("result.out");
-        writer.write("headache: " + headacheCount + "\n");  
-        writer.write("rash: " + rashCount + "\n");
-        writer.write("dilated pupils: " + pupilCount + "\n");
-        writer.close();
+        // // next generate output in result.out
+        // FileWriter writer = new FileWriter("result.out");
+        // writer.write("headache: " + headacheCount + "\n");  
+        // writer.write("rash: " + rashCount + "\n");
+        // writer.write("dilated pupils: " + pupilCount + "\n");
+        // writer.close();
     }
 }
