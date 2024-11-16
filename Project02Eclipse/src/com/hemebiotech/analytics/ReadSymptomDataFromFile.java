@@ -38,10 +38,11 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				symptoms.add(line);
 				line = reader.readLine();
 			}
+			System.out.println("Symptoms successfully read");
 		} catch (IOException e) {
-			System.out.println("Can not open a file "  + e);
+			throw new UnsupportedOperationException("Can not read the symptoms from the file " + e);
 		}
-		
+
 		return symptoms;
 	}
 

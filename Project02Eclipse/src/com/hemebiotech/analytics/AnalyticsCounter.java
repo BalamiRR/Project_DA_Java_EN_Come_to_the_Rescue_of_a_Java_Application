@@ -1,12 +1,11 @@
 package com.hemebiotech.analytics;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
-import java.util.TreeMap;
 import java.util.Map;
+import java.util.TreeMap;
 
-public class AnalyticsCounter extends Main {
+public class AnalyticsCounter {
     private final ISymptomReader reader;
     private final ISymptomWriter writer;
 
@@ -15,13 +14,13 @@ public class AnalyticsCounter extends Main {
         this.writer = writer;
     }
 
-    public  List<String> getSymptoms(String filename) throws IOException{
+    public List<String> getSymptoms() {
         return reader.getSymptoms();
     }
 
-    public Map<String, Integer> countSymptoms(List<String> symptoms){
-        Map<String, Integer> symptomCounts = new HashMap<>(); //TreeMap<>();
-        for(String symptom: symptoms){
+    public Map<String, Integer> countSymptoms(List<String> symptoms) {
+        Map<String, Integer> symptomCounts = new HashMap<>();
+        for (String symptom : symptoms) {
             symptomCounts.put(symptom, symptomCounts.getOrDefault(symptom, 0) + 1);
         }
         return symptomCounts;
@@ -31,7 +30,7 @@ public class AnalyticsCounter extends Main {
         return new TreeMap<>(symptoms);
     }
 
-    public void writeSymptoms(Map<String, Integer> symptoms) throws IOException{
+    public void writeSymptoms(Map<String, Integer> symptoms) {
         writer.writeSymptoms(symptoms);
     }
 }
