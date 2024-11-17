@@ -4,6 +4,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ *  The WriteSymptomDataToFile class is an implementation of the ISymptomWriter interface
+ *  for writing symptoms data to a specified file.
+ *
+ *  This class takes a filename as input during instantiation and writes a map of symptoms
+ *
+*/
 public class WriteSymptomDataToFile implements ISymptomWriter {
     private final String filename;
 

@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * The AnalyticsCounter class handles reading, counting, sorting, and writing symptom data.
+ * It works with implementations of the ISymptomReader and ISymptomWriter interfaces to get
+ * the symptom data from a source and save the processed results to a destination.
+ */
 public class AnalyticsCounter {
     private final ISymptomReader reader;
     private final ISymptomWriter writer;
